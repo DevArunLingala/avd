@@ -6,12 +6,17 @@ build-backend = "hatchling.build"
 name = "avd"
 version = "0.1.0"
 description = "Always-running Android emulator for macOS"
-authors = [{name = "Your Name"}]
+authors = [{name = "DevArunLingala"}]
 dependencies = [
     "typer[all]",
     "rich",
     "tomlkit",
     "psutil",
 ]
+requires-python = ">=3.12"
+
 [project.scripts]
 avd = "avd.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["avd"]  # ← FIX: Tells Hatchling where your code lives
