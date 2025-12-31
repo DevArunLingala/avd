@@ -1,0 +1,17 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "avd"
+version = "0.1.0"
+description = "Always-running Android emulator for macOS"
+authors = [{name = "Your Name"}]
+dependencies = [
+    "typer[all]",
+    "rich",
+    "tomlkit",
+    "psutil",
+]
+[project.scripts]
+avd = "avd.cli:app"

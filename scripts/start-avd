@@ -1,0 +1,4 @@
+#!/bin/bash
+# Background AVD starter - just runs the Python CLI
+cd "$(dirname "$0")/.."
+python -m avd start --headless
